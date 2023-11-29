@@ -3,6 +3,7 @@ import './sign-up-form.styles.scss'
 import { useState } from 'react';
 
 import FormInput from '../form-input/form-input.component';
+import Button from  '../button/button.component'
 
 
 const defaultFormFields = {
@@ -47,9 +48,10 @@ const SignUpForm = () => {
     };
 
     return (
-        <div className="">
+        <div className="sign-up-form-container">
             <h2>I do not have a account</h2>
-            <h4>Sign up with your email and password</h4>
+            <span>Sign up with your email and password</span>
+
             <form className="sign-up-form" onSubmit={handleSubmit}>
                 <FormInput 
                     label="Display Name"
@@ -93,7 +95,7 @@ const SignUpForm = () => {
                     }}
                 />
 
-                <button type="submit">Sign Up</button>
+                <Button buttonType='inverted' type="submit">Sign Up</Button>
             </form>
         </div>
     )

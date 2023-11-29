@@ -4,6 +4,7 @@ import {
 } from '../../utils/firebase/firebase.utils'
 
 import SignUnForm  from '../../components/sign-up-form/sign-up-form.component';
+import Button from '../../components/button/button.component'
 
 // Sign in function
 const SignIn = () => {
@@ -20,9 +21,8 @@ const SignIn = () => {
         <div>
             <div>
                 <h2>Sign In</h2>
-                <button onClick={logGoogleUser}> 
-                    Sign in With Google Popup
-                </button>
+                <Button buttonType='google' onClick={logGoogleUser}> Sign in With Google</Button>
+                <Button buttonType='default'>Sign In With Email</Button>
             </div>
             <div>
                 <h2>Sign Up</h2>
