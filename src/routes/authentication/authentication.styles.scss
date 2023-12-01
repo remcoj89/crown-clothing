@@ -1,6 +1,7 @@
 .authentication-container{
-    display: grid;
-    grid-template-columns: 40% 40%;
+    display: flex;
     justify-content: space-between;
-    padding: 5%;
+    width: 900px;
+    margin: 30px auto;
+    gap :10px;
 }
