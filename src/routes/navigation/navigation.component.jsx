@@ -23,7 +23,7 @@ const NavComponent = () => {
             <Link to="/" className='logo-container'>
                 <div><CrwnLogo className='logo'/></div>
             </Link>
-          
+
             <div className='nav-links-container'>
                 <Link to="/shop" className='nav-link'>SHOP</Link>
                 <Link to="/contact" className='nav-link'>CONTACT</Link>
@@ -36,12 +36,11 @@ const NavComponent = () => {
                 }
                 <div><CartIcon /></div>
             </div>
-      
-           {isCartOpen &&  <CartDropdown/>}
+            {isCartOpen &&  <CartDropdown/>}
           </nav>
           <Outlet />
         </Fragment>
     )
 };
 
-export default NavComponent 
+export default NavComponent
