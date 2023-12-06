@@ -14,6 +14,8 @@ const CheckoutItem = ({cartitem}) => {
   const removeCartItem = () => removeCartItemFromCart(cartitem);
   const clearCartItem = () => clearCartItemFromCart(cartitem);
 
+  const totalPrice = quantity * price
+
 
   return (
     <div className='checkout-item-container'>
@@ -29,7 +31,7 @@ const CheckoutItem = ({cartitem}) => {
         <span className='arrow' onClick={addCartItem}>&#62;</span>
       </div>
 
-      <span className='price'>€ {quantity * price}</span>
+      <span className='price'>€ {totalPrice}</span>
       <div className="remove-button">
         <span onClick={clearCartItem}>&#10005;</span>
       </div>
