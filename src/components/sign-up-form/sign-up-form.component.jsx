@@ -1,8 +1,9 @@
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from '../../utils/firebase/firebase.utils';
-import './sign-up-form.styles.scss'
 import { useState } from 'react';
 import FormInput from '../form-input/form-input.component';
-import Button from  '../button/button.component';
+import Button, {BUTTON_TYPE_CLASSES} from  '../button/button.component';
+
+import {SignUpFormContainer, SignUpTitle} from './sign-up-form.styles'
 
 const defaultFormFields = {
     displayName: '',
@@ -18,7 +19,7 @@ const {displayName, email, password, confirmPassword} = formFields;
 const resetFormFields = () => {
  setFormFields(defaultFormFields)
 };
-      
+
 const handleSubmit = async (event) => {
     event.preventDefault();
     if(password !== confirmPassword) {
@@ -44,11 +45,11 @@ const handelChange = (event) => {
 };
 
 return (
-    <div className="sign-up-form-container">
-        <h2>I do not have a account</h2>
+    <SignUpFormContainer>
+        <SignUpTitle>I do not have a account</SignUpTitle>
         <span>Sign up with your email and password</span>
         <form className="sign-up-form" onSubmit={handleSubmit}>
-            <FormInput 
+            <FormInput
                 label="Display Name"
                 inputOptions={{
                     name:"displayName",
@@ -59,7 +60,7 @@ return (
                 }}
             />
 
-            <FormInput 
+            <FormInput
                 label="Email"
                 inputOptions={{
                     name:"email",
@@ -70,7 +71,7 @@ return (
                 }}
             />
 
-            <FormInput 
+            <FormInput
                 label="Password"
                 inputOptions={{
                   name:"password",
@@ -81,7 +82,7 @@ return (
                 }}
             />
 
-            <FormInput 
+            <FormInput
                 label="Confirm Password"
                 inputOptions={{
                     name:"confirmPassword",
@@ -92,10 +93,10 @@ return (
                 }}
             />
 
-            <Button buttonType='inverted' type="submit">Sign Up</Button>
+            <Button buttonType={BUTTON_TYPE_CLASSES.inverted } type="submit">Sign Up</Button>
         </form>
-    </div>
-) 
+    </SignUpFormContainer>
+)
 };
 
 export default SignUpForm;
