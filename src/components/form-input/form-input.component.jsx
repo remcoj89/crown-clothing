@@ -9,8 +9,6 @@ const FormInput = ({label, inputOptions }) => {
                 {label}
             </label>
         )}
-
-           
         </div>
     )
 }
