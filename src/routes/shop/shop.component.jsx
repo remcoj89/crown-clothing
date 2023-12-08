@@ -1,5 +1,3 @@
-import './shop.styles.scss'
-
 import {Routes, Route} from 'react-router-dom';
 import CategoriesPreview from '../categories-preview/categories-previev.component';
 import Category from '../category/category.component';
